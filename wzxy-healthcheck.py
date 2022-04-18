@@ -6,12 +6,7 @@ import utils
 from urllib.parse import urlencode
 import time
 import hashlib
-sign_time = int(round(time.time() * 1000)) #13位
-content = f"甘肃省_{t}_天水市"
-signature = hashlib.sha256(content.encode('utf-8')).hexdigest()
-"city_code": "156620500",  # 20220417新增，广州
-"timestampHeader": sign_time,  # 20220417新增，时间戳（13位）
-"signatureHeader": signature  # 20220417新增，SHA256
+
 
 class WoZaiXiaoYuanPuncher:
     def __init__(self):
